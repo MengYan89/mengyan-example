@@ -24,11 +24,13 @@ public class LoginExample {
         bot.login();
     }
 
-    public static void login() {
+    public static Bot login() {
         // 使用案例NewBotExample构建一个bot
         Bot bot = NewBotExample.newBot(qq, pwd);
         // 使用login方法可进行登录
         bot.login();
+
+        return bot;
     }
 
 }
