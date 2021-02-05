@@ -7,6 +7,18 @@
     <groupId>com.mengyan</groupId>
     <artifactId>mengyan-example-mirai</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <kotlin.version>1.4.21</kotlin.version>
@@ -23,7 +35,7 @@
         <dependency>
             <groupId>net.mamoe</groupId>
             <artifactId>mirai-core-jvm</artifactId>
-            <version>2.1.0</version> <!-- 替换版本为你需要的版本 -->
+            <version>2.3.2</version> <!-- 替换版本为你需要的版本 -->
         </dependency>
 
         <dependency>
