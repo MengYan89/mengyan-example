@@ -4,8 +4,6 @@ import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.BotFactory;
 import net.mamoe.mirai.utils.BotConfiguration;
 
-import java.io.File;
-
 /**
  * mirai框架构建一个Bot
  */
@@ -18,9 +16,9 @@ public class NewBotExample {
 
     public static Bot newBot(Integer qq, String pwd) {
         //1.创建和配置BOT
-        final Bot bot = BotFactory.INSTANCE.newBot(qq, pwd, new BotConfiguration(){{
+        final Bot bot = BotFactory.INSTANCE.newBot(qq, pwd, new BotConfiguration() {{
             // 设置Bot运行路径,会生成device.json
-            setWorkingDir(new File("dir"));
+            // setWorkingDir(new File("dir"));
             // 将设备信息储存进默认文件名device.json
             // 出现当前上网环境异常时可使用旧版mirai登录一段时间后使用旧版的设备信息即可正常登录
             fileBasedDeviceInfo("deviceInfo.json");
