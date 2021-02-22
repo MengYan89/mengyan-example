@@ -6,6 +6,8 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
 
 /**
  * Mirai框架机器人监听机器人被邀请入群
+ * Mirai框架事件一览
+ * https://github.com/mamoe/mirai/tree/dev/mirai-core-api/src/commonMain/kotlin/event/events
  */
 public class InvitedJoinGroupEventExample {
     public static void main(String[] args) {
