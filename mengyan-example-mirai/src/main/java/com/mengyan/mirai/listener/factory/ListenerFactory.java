@@ -68,7 +68,7 @@ public class ListenerFactory {
         Set<Class<?>> handlerClass = ClassUtil.getClasses("com.mengyan.mirai.listener");
         for (Class clazz : handlerClass) {
             // 判断这个class是否继承SimpleListenerHost
-            if (clazz.isAssignableFrom(SimpleListenerHost.class)) {
+            if (SimpleListenerHost.class.isAssignableFrom(clazz)) {
                 // 是否被EventHandlerListener标记
                 if (clazz.isAnnotationPresent(EventHandlerListener.class)) {
                     EventHandlerListener annotation = (EventHandlerListener)clazz.getAnnotation(EventHandlerListener.class);
