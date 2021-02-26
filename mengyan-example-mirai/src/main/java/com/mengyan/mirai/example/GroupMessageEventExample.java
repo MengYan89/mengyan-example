@@ -5,6 +5,7 @@ import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.ListeningStatus;
 import net.mamoe.mirai.event.SimpleListenerHost;
+import net.mamoe.mirai.event.events.FriendMessageEvent;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import org.jetbrains.annotations.NotNull;
 
@@ -37,6 +38,15 @@ public class GroupMessageEventExample {
         @EventHandler
         public ListeningStatus onMessage(@NotNull GroupMessageEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
             System.out.println(event.getGroup().getId()+":"+event.getMessage());
+            return ListeningStatus.LISTENING; // 表示继续监听事件
+            // return ListeningStatus.STOPPED; // 表示停止监听事件
+        }
+
+        // 可以通过相同方法名不同参数类型的方法在同一个类中监听多个事件
+        @NotNull
+        @EventHandler
+        public ListeningStatus onMessage(@NotNull FriendMessageEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
+            System.out.println(event.getFriend()+":"+event.getMessage());
             return ListeningStatus.LISTENING; // 表示继续监听事件
             // return ListeningStatus.STOPPED; // 表示停止监听事件
         }
