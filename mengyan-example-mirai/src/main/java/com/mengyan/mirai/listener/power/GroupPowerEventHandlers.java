@@ -25,6 +25,8 @@ public class GroupPowerEventHandlers extends SimpleListenerHost {
      * @return
      * @throws Exception
      */
+    @NotNull
+    @EventHandler
     public ListeningStatus onMessage(@NotNull BotInvitedJoinGroupRequestEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
         // event.subject.sendMessage("received");
         System.out.println(event);

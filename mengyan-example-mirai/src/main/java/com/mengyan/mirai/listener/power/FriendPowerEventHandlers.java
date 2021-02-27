@@ -1,6 +1,7 @@
 package com.mengyan.mirai.listener.power;
 
 import com.mengyan.mirai.listener.EventHandlerListener;
+import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.ListeningStatus;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.BotInvitedJoinGroupRequestEvent;
@@ -21,6 +22,8 @@ public class FriendPowerEventHandlers extends SimpleListenerHost {
      * @return
      * @throws Exception
      */
+    @NotNull
+    @EventHandler
     public ListeningStatus onMessage(@NotNull NewFriendRequestEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
         // event.subject.sendMessage("received");
         System.out.println(event);
@@ -34,6 +37,8 @@ public class FriendPowerEventHandlers extends SimpleListenerHost {
      * @return
      * @throws Exception
      */
+    @NotNull
+    @EventHandler
     public ListeningStatus onMessage(@NotNull FriendAddEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
         // event.subject.sendMessage("received");
         System.out.println(event);
@@ -47,6 +52,8 @@ public class FriendPowerEventHandlers extends SimpleListenerHost {
      * @return
      * @throws Exception
      */
+    @NotNull
+    @EventHandler
     public ListeningStatus onMessage(@NotNull FriendDeleteEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
         // event.subject.sendMessage("received");
         System.out.println(event);
