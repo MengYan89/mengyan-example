@@ -1,7 +1,6 @@
 package com.mengyan.mirai;
 
 import com.mengyan.mirai.example.QQProperties;
-import com.mengyan.mirai.listener.GroupMessageEventHandlers;
 import com.mengyan.mirai.listener.factory.ListenerFactory;
 import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.BotFactory;
@@ -30,7 +29,14 @@ public class Start {
 
         }});
 
-        bot.getEventChannel().registerListenerHost(ListenerFactory.getSingleton(GroupMessageEventHandlers.class));
+        // bot.getEventChannel().registerListenerHost(ListenerFactory.getSingleton(GroupMessageEventHandlers.class));
+        try {
+            ListenerFactory.assembleListenerForBot(bot);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
         bot.login();
 
         while (true) {
