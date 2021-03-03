@@ -5,12 +5,17 @@ import com.mengyan.mirai.listener.factory.ListenerFactory;
 import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.BotFactory;
 import net.mamoe.mirai.utils.BotConfiguration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class Start {
     private static final Integer qq = QQProperties.getQQ();
     private static final String pwd = QQProperties.getPwd();
+    private static final Logger log = LogManager.getLogger(Start.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        log.info("info Main");
         final Bot bot = BotFactory.INSTANCE.newBot(qq, pwd, new BotConfiguration() {{
             // 设置Bot运行路径,会生成device.json
             // setWorkingDir(new File("dir"));
@@ -41,6 +46,14 @@ public class Start {
 
         while (true) {
 
+        }
+    }
+
+    static {
+        try {
+            Class.forName("com.mengyan.mirai.config.LogConfig");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
