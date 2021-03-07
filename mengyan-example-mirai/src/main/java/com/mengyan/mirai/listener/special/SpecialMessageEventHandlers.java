@@ -2,6 +2,7 @@ package com.mengyan.mirai.listener.special;
 
 import com.mengyan.mirai.listener.EventHandlerListener;
 import kotlin.coroutines.CoroutineContext;
+import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.ListeningStatus;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.BotInvitedJoinGroupRequestEvent;
@@ -25,6 +26,8 @@ public class SpecialMessageEventHandlers extends SimpleListenerHost {
      * @return
      * @throws Exception
      */
+    @NotNull
+    @EventHandler
     public ListeningStatus onMessage(@NotNull NudgeEvent event) throws Exception { // 可以抛出任何异常, 将在 handleException 处理
         // event.subject.sendMessage("received");
         System.out.println(event);

@@ -20,7 +20,7 @@ public class GroupMessageEventExample {
             bot.getEventChannel().subscribeAlways(GroupMessageEvent.class, event -> {
                 System.out.println(event.getGroup().getId()+":"+event.getMessage());
             });
-            // 使用 @EventHandler 注解
+
             bot.getEventChannel().registerListenerHost(new EventHandlers());
         }
         while (true) {

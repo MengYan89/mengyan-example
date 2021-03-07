@@ -74,7 +74,7 @@ public class ListenerFactory {
                     EventHandlerListener annotation = (EventHandlerListener)clazz.getAnnotation(EventHandlerListener.class);
                     // 根据注解属性判断如何处理
                     if (annotation.singleton()) {
-                        SimpleListenerHost listenerHandler = (SimpleListenerHost)clazz.newInstance();
+                        SimpleListenerHost listenerHandler = (SimpleListenerHost) clazz.newInstance();
                         map.put(clazz, listenerHandler);
                     } else {
                         notSingletonHandlerClass.add(clazz);

@@ -7,7 +7,6 @@ import net.mamoe.mirai.event.ListeningStatus;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.GroupTempMessageEvent;
-import net.mamoe.mirai.event.events.NudgeEvent;
 import org.jetbrains.annotations.NotNull;
 
 /**

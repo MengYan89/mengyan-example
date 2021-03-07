@@ -4,7 +4,7 @@ import com.mengyan.mirai.example.QQProperties;
 import com.mengyan.mirai.listener.factory.ListenerFactory;
 import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.BotFactory;
-import net.mamoe.mirai.utils.BotConfiguration;
+import net.mamoe.mirai.utils.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,9 +13,8 @@ public class Start {
     private static final Integer qq = QQProperties.getQQ();
     private static final String pwd = QQProperties.getPwd();
     private static final Logger log = LogManager.getLogger(Start.class);
-
     public static void main(String[] args){
-        log.info("info Main");
+        // log.info("info Main");
         final Bot bot = BotFactory.INSTANCE.newBot(qq, pwd, new BotConfiguration() {{
             // 设置Bot运行路径,会生成device.json
             // setWorkingDir(new File("dir"));
@@ -31,6 +30,10 @@ public class Start {
             // 分别有ANDROID_PHONE，ANDROID_PAD，ANDROID_WATCH
             // 默认为ANDROID_PHONE
             setProtocol(MiraiProtocol.ANDROID_PAD);
+            // 重定向日志
+            // 将log4j2日志转化为MiraiLogger
+            // setBotLoggerSupplier(bot1 -> LoggerAdapters.asMiraiLogger(log));
+
 
         }});
 
