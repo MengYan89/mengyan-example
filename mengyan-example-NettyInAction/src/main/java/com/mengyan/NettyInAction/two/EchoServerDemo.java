@@ -14,6 +14,7 @@ import java.nio.charset.Charset;
 
 /**
  * Echo服务端代码
+ * IDEA执行时在program arguments中填写9999
  */
 public class EchoServerDemo {
 

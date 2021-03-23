@@ -13,6 +13,7 @@ import java.net.InetSocketAddress;
 
 /**
  * Echo客户端代码
+ * IDEA执行时在program arguments中填写127.0.0.1 9999
  */
 public class EchoClientDemo {
 
