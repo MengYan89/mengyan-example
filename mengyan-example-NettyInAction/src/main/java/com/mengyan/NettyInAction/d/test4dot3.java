@@ -16,7 +16,7 @@ import java.nio.charset.Charset;
  * 简单的接受连接并向客户端写"Hi!",然后关闭连接
  */
 public class test4dot3 {
-    
+
     public static void main(String[] args) throws Exception {
         NettyOioServer server = new NettyOioServer();
         server.server(9999);
