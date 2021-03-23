@@ -1,4 +1,4 @@
-package com.mengyan.NettyInAction.one;
+package com.mengyan.NettyInAction.a;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

@@ -1,4 +1,4 @@
-package com.mengyan.NettyInAction.two;
+package com.mengyan.NettyInAction.b;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;

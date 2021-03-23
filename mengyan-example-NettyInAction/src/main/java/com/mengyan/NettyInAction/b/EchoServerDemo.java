@@ -1,4 +1,4 @@
-package com.mengyan.NettyInAction.two;
+package com.mengyan.NettyInAction.b;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
@@ -10,7 +10,6 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.CharsetUtil;
 
 import java.net.InetSocketAddress;
-import java.nio.charset.Charset;
 
 /**
  * Echo服务端代码

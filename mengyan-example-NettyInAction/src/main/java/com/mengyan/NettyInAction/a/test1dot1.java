@@ -1,4 +1,4 @@
-package com.mengyan.NettyInAction.one;
+package com.mengyan.NettyInAction.a;
 
 import java.io.BufferedReader;
 import java.io.IOException;

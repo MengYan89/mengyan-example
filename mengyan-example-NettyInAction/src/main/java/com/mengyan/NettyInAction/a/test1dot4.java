@@ -1,4 +1,4 @@
-package com.mengyan.NettyInAction.one;
+package com.mengyan.NettyInAction.a;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
