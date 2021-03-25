@@ -38,7 +38,7 @@ public class ByteBufSliceOrCopy {
         // 将打印 Netty in Action
         System.out.println(copy.toString(utf8));
         // 更新索引0处的字节
-        buf.setByte(0, (byte)'J');
+        bufCopy.setByte(0, (byte)'J');
         // 将会输出true,因为数据是不共享的
         // 原文使用assert判断boolean表达式,在这里为了程序的连贯性将其打印出来
         System.out.println(bufCopy.getByte(0) != copy.getByte(0));
