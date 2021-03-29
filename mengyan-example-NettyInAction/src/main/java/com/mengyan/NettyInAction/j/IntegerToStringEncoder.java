@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * 10-6 IntegerToStringEncoder
+ * 专业用法可参照ProtobufEncoder
  */
 public class IntegerToStringEncoder extends MessageToMessageEncoder<Integer> {
     @Override
