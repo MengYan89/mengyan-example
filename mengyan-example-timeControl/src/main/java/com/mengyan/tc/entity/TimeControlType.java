@@ -5,6 +5,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+/**
+ * 每段时间的用途类型
+ */
 @Entity
 @Table(name = "time_control_type")
 public class TimeControlType extends BaseEntity {

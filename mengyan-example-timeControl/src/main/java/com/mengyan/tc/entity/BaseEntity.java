@@ -9,8 +9,10 @@ import java.util.Date;
  */
 @MappedSuperclass
 public class BaseEntity {
+    // 创建时间
     @Column(name = "create_time")
     private Date createTime;
+    // 修改时间
     @Column(name = "modification_time")
     private Date modificationTime;
     // 1 为删除

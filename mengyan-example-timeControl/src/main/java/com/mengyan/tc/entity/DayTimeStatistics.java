@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+/**
+ * 在数据库中用于存储每一段时间
+ */
 @Entity
 @Table(name = "day_time_statistics")
 public class DayTimeStatistics extends BaseEntity {
