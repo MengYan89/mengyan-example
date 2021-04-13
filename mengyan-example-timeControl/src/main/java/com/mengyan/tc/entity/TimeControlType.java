@@ -13,8 +13,12 @@ import java.util.Date;
 public class TimeControlType extends BaseEntity {
     @Id
     private Integer typeId;
+    // 类型名称
     private String typeName;
+    // 大类id
     private Integer typeParentId;
+    // 代表颜色
+    private Integer typeColor;
 
     public Integer getTypeId() {
         return typeId;
@@ -38,5 +42,13 @@ public class TimeControlType extends BaseEntity {
 
     public void setTypeParentId(Integer typeParentId) {
         this.typeParentId = typeParentId;
+    }
+
+    public Integer getTypeColor() {
+        return typeColor;
+    }
+
+    public void setTypeColor(Integer typeColor) {
+        this.typeColor = typeColor;
     }
 }

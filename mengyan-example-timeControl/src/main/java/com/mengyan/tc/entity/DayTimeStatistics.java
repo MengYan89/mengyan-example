@@ -16,7 +16,7 @@ public class DayTimeStatistics extends BaseEntity {
     @Column(name = "dts_id")
     private String dtsId;
     @Column(name = "user_id")
-    private Integer userId;
+    private Long userId;
     @Column(name = "dts_day")
     private Date dtsDay;
     @Column(name = "dts_time_start")
@@ -39,11 +39,11 @@ public class DayTimeStatistics extends BaseEntity {
         this.dtsId = dtsId;
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
