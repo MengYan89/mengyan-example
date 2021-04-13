@@ -22,7 +22,7 @@ public class TestController {
     public String test() {
         DayTimeStatistics dayTimeStatistics = new DayTimeStatistics();
         dayTimeStatistics.setDtsId("uuid");
-        dayTimeStatistics.setUserId(33333);
+        dayTimeStatistics.setUserId(33333L);
         dayTimeStatistics.setDtsDay(new Date());
         dayTimeStatistics.setDtsTimeStart(0);
         dayTimeStatistics.setDtsTimeEnd(230);
